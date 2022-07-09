@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+
+import PagesData from "./Services/PagesData.json";
+
+import PageWrapper from "./Pages/PageWrapper";
+import Header from "./Components/Header";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        {PagesData.map((page) => {
+          const { pathN, pageName, pageCategorie, id } = page;
+          return (
+            <Route
+              key={id}
+              path={pathN}
+              element={
+                <PageWrapper
+                  pageName={pageName}
+                  pageCategorie={pageCategorie}
+                />
+              }
+            />
+          );
+        })}
+      </Routes>
     </div>
   );
 }

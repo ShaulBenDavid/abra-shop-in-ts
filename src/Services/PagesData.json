@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "pageCategorie": "best-seller",
+    "pageName": "best sellers",
+    "pathN": "/"
+  },
+  {
+    "id": 2,
+    "pageCategorie": "clothing",
+    "pageName": "clothing",
+    "pathN": "/clothing"
+  },
+  {
+    "id": 3,
+    "pageCategorie": "home",
+    "pageName": "home",
+    "pathN": "/home"
+  },
+  {
+    "id": 4,
+    "pageCategorie": "office",
+    "pageName": "office",
+    "pathN": "/office"
+  },
+  {
+    "id": 5,
+    "pageCategorie": "sports",
+    "pageName": "sports",
+    "pathN": "/sports"
+  }
+]
